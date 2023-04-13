@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use Doctrine\DBAL\Schema\Index;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +18,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('products', [ProductController::class, 'index']);
