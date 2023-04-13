@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      #map local folder to docker container app folder
       - .:/app
     ports:
       - 8000:8000
