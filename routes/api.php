@@ -14,5 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('products', [ProductController::class, 'listAll']);
-Route::get('products/{id}', [ProductController::class, 'show']);
+Route::apiResource('products', ProductController::class);
